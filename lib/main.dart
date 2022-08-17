@@ -12,11 +12,18 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: const Text(
-        'Flutterando',
-        textDirection: TextDirection.ltr,
-      ),
+    return MaterialApp(home: HomePage());
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: Center(child: Text('Flutterando')),
+      //utilizado apenas 1x
     );
   }
 }
